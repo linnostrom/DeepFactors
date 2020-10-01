@@ -15,10 +15,11 @@ RUN set -x && apt-get update -y && apt-get install -y \
       libglew-dev \
       libgoogle-glog-dev \
       libjsoncpp-dev \
-      libopencv-dev \ 
+      libopencv-dev \
       libopenni2-dev \
       unzip \
       wget \
+      nano \
       && rm -rf /var/lib/apt/lists/*
 
 # Download TensorFlow C API
@@ -47,5 +48,11 @@ RUN set -x && \
       .. && \
     make -j1
 
-WORKDIR /DeepFactors
-ENTRYPOINT ["/bin/bash"]
+RUN apt-get update -y \
+  && apt install python-pip -y \
+  && pip install numpy \
+  && pip install imageio==2.6.1 \
+  && pip install opencv-python==4.2.0.32
+
+VOLUME data2
+

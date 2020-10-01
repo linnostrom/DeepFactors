@@ -6,7 +6,8 @@ docker run -it \
     --rm \
     --runtime=nvidia \
     -v ${DATA_PATH}:${DATA_PATH} \
+    -v /home3/pol/data2/:/data2:rw \
     -e DISPLAY=$DISPLAY \
     -v /tmp/.X11-unix/:/tmp/.X11-unix:ro \
     deepfactors
-xhost -local:
+xhost -local

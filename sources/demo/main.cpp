@@ -34,7 +34,7 @@ DEFINE_bool(quit_on_finish, false, "Close the program after finishing all frames
 DEFINE_string(init_type, "ONEFRAME", "How to initialize the slam system (ONEFRAME, TWOFRAME)");
 DEFINE_string(record_input, "", "Path where to save input images");
 DEFINE_bool(pause_step, false, "Pause after each frame");
-DEFINE_string(run_log_dir, "", "Directory where the run logs will be saved. The runs are stored in separate dirs named using current timestamp. \n"
+DEFINE_string(run_log_dir, "/data2/", "Directory where the run logs will be saved. The runs are stored in separate dirs named using current timestamp. \n"
                            "If not specified the logs will not be saved. This directory will be created if it doesn't exist.");
 DEFINE_string(run_dir_name, "", "Force a specific run directory name. If empty, a timestamp is used");
 DEFINE_bool(enable_timing, false, "Enable profiling of certain parts of the algorithm");

@@ -117,7 +117,7 @@ function main()
   [ ! -f "${scannet_script}" ] && die ${err_msg}
 
   # patch download-scannet.py to work with python3
-  patch -Nd ${script_dir} -r - < scripts/download_scannet_python3.patch
+  #patch -Nd ${script_dir} -r - < scripts/download_scannet_python3.patch
 
   # get a scannet sequence somewhere
   info "Getting ScanNet test sequence ${scene_id}. This might take a while"
