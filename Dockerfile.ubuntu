@@ -55,4 +55,7 @@ RUN apt-get update -y \
   && pip install opencv-python==4.2.0.32
 
 VOLUME data2
+WORKDIR /DeepFactors
+ENTRYPOINT ["/bin/bash"]
+
 
