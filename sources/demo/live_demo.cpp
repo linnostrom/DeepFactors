@@ -242,7 +242,7 @@ void LiveDemo<CS>::VisualizerLoop()
   // create and init gui
   // NOTE: need to do this here so that opengl is initialized in the correct thread
   // NOTE(2): there's now a way how to fix that in pangolin
-  visualizer_->Init(netcam_, opts_.df_opts);
+ // visualizer_->Init(netcam_, opts_.df_opts);
 
   const float loop_time = 1000.0f / 60.f;
   double elapsed_ms = 0;
@@ -251,8 +251,8 @@ void LiveDemo<CS>::VisualizerLoop()
     auto loop_start = chrono::steady_clock::now();
 
     // visualize
-    visualizer_->HandleEvents();
-    visualizer_->Draw(elapsed_ms);
+   // visualizer_->HandleEvents();
+    //visualizer_->Draw(elapsed_ms);
 
     // regulate loop frequency to 60 hz
     auto loop_end = chrono::steady_clock::now();
